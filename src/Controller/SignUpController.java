@@ -1,3 +1,5 @@
+package Controller;
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -18,10 +20,10 @@ public class SignUpController {
 
     @FXML
     void Login(ActionEvent event) throws IOException {
-        Stage primaryStage = new Stage();
-        Parent root = FXMLLoader.load(getClass().getResource("Login.fxml"));
+        Stage primaryStage = (Stage) SignPass.getScene().getWindow();
+        Parent root = FXMLLoader.load(getClass().getResource("../view/Login.fxml"));
         primaryStage.setTitle("Login");
-        primaryStage.setScene(new Scene(root , 600 , 500));
+        primaryStage.setScene(new Scene(root));
         primaryStage.show();
     }
 

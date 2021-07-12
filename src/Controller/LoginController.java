@@ -1,8 +1,12 @@
+package Controller;
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Hyperlink;
+import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
@@ -13,26 +17,27 @@ public class LoginController
     @FXML
     private TextField userText;
     @FXML
-    private TextField passText;
-
+    private PasswordField passText;
+    @FXML
+    private Hyperlink hyperlink;
     @FXML
     void Login(ActionEvent event) throws IOException {
-        Stage primaryStage = new Stage();
+        Stage primaryStage = (Stage) userText.getScene().getWindow();
         if(userText.getText().equals("admin") && passText.getText().equals("admin"))
         {
-            Parent root = FXMLLoader.load(getClass().getResource("MainMenu.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("../View/MainMenu.fxml"));
             primaryStage.setTitle("MainMenu");
-            primaryStage.setScene(new Scene(root , 600 , 400));
+            primaryStage.setScene(new Scene(root));
             primaryStage.show();
         }
     }
 
     @FXML
     void SignUp(ActionEvent event) throws IOException {
-        Stage primaryStage = new Stage();
-        Parent root = FXMLLoader.load(getClass().getResource("SignUp.fxml"));
+        Stage primaryStage = (Stage) userText.getScene().getWindow();
+        Parent root = FXMLLoader.load(getClass().getResource("../View/SignUp.fxml"));
         primaryStage.setTitle("SignUp");
-        primaryStage.setScene(new Scene(root , 600 , 500));
+        primaryStage.setScene(new Scene(root));
         primaryStage.show();
     }
 
