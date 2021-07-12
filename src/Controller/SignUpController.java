@@ -1,5 +1,6 @@
 package Controller;
 
+import Players.User;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -32,7 +33,7 @@ public class SignUpController {
     {
         String username = SignText.getText();
         String password = SignPass.getText();
-
+        User player  = new User(username , password);
     }
 
 }

@@ -11,6 +11,7 @@ import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import Players.User;
 
 public class LoginController
 {
@@ -21,9 +22,10 @@ public class LoginController
     @FXML
     private Hyperlink hyperlink;
     @FXML
+    User p;
     void Login(ActionEvent event) throws IOException {
         Stage primaryStage = (Stage) userText.getScene().getWindow();
-        if(userText.getText().equals("admin") && passText.getText().equals("admin"))
+        if(userText.getText().equals(p.getUser()) && passText.getText().equals(p.getPass()))
         {
             Parent root = FXMLLoader.load(getClass().getResource("../View/MainMenu.fxml"));
             primaryStage.setTitle("MainMenu");
