@@ -7,7 +7,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.BattleHistory">
    <children>
       <ImageView fitHeight="488.0" fitWidth="774.0" pickOnBounds="true">
@@ -15,7 +14,7 @@
             <Image url="@../Photos/backGround.png" />
          </image>
       </ImageView>
-      <Label layoutX="86.0" layoutY="31.0" style="-fx-background-color: cyan; -fx-background-radius: 15;" text="Your Battle History" textFill="#028c10">
+      <Label fx:id="BattleHistoryLabel1" layoutX="86.0" layoutY="31.0" style="-fx-background-color: cyan; -fx-background-radius: 15;" text="Your Battle History" textFill="#028c10">
          <font>
             <Font name="System Bold Italic" size="15.0" />
          </font>

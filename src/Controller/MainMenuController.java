@@ -13,7 +13,7 @@ public class MainMenuController {
 
     @FXML
     void ShowDeck(ActionEvent event) throws IOException {
-        Stage primaryStage = new Stage();
+        Stage primaryStage = (Stage) Image1.getScene().getWindow();
         Parent root = FXMLLoader.load(getClass().getResource("../View/BattleDeck.fxml"));
         primaryStage.setTitle("BattleDeck");
         primaryStage.setScene(new Scene(root));
@@ -21,13 +21,21 @@ public class MainMenuController {
     }
 
     @FXML
-    void showHistory(ActionEvent event) {
-
+    void showHistory(ActionEvent event) throws IOException {
+        Stage primaryStage = (Stage) BattleHistoryLabel1.getScene().getWindow();
+        Parent root = FXMLLoader.load(getClass().getResource("../View/BattleDeck.fxml"));
+        primaryStage.setTitle("BattleDeck");
+        primaryStage.setScene(new Scene(root));
+        primaryStage.show();
     }
 
     @FXML
-    void showProfile(ActionEvent event) {
-
+    void showProfile(ActionEvent event) throws IOException {
+        Stage primaryStage = (Stage) ProfileLabel1.getScene().getWindow();
+        Parent root = FXMLLoader.load(getClass().getResource("../View/BattleDeck.fxml"));
+        primaryStage.setTitle("BattleDeck");
+        primaryStage.setScene(new Scene(root));
+        primaryStage.show();
     }
 
     @FXML
