@@ -124,7 +124,7 @@
             <Image url="@../Photos/clash-royale-inferno-tower.png" />
          </image>
       </ImageView>
-      <Button layoutX="271.0" layoutY="1112.0" mnemonicParsing="false" style="-fx-background-color: cyan; -fx-background-radius: 10;" text="Back" textFill="#008e1a">
+      <Button layoutX="271.0" layoutY="1112.0" mnemonicParsing="false" onAction="#Back" style="-fx-background-color: cyan; -fx-background-radius: 10;" text="Back" textFill="#008e1a">
          <font>
             <Font name="System Bold Italic" size="15.0" />
          </font>
