@@ -1,44 +1,58 @@
 package Controller;
 
-import javafx.event.ActionEvent;
+import GameControl.ShareData;
+import Players.User;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Hyperlink;
+import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
+import java.io.FileInputStream;
 import java.io.IOException;
+import java.io.ObjectInputStream;
 
-public class LoginController
-{
+public class LoginController {
     @FXML
     private TextField userText;
     @FXML
     private PasswordField passText;
     @FXML
-    private Hyperlink hyperlink;
+    private Label error;
+
     @FXML
-    void Login(ActionEvent event) throws IOException {
-        Stage primaryStage = (Stage) userText.getScene().getWindow();
-        if(userText.getText().equals("admin") && passText.getText().equals("admin"))
-        {
-            Parent root = FXMLLoader.load(getClass().getResource("../View/MainMenu.fxml"));
-            primaryStage.setTitle("MainMenu");
-            primaryStage.setScene(new Scene(root));
-            primaryStage.show();
+    void Login() {
+        try (FileInputStream f = new FileInputStream("Save.txt")){
+            while (f.available() != 0){
+                ObjectInputStream objectInputStream = new ObjectInputStream(f);
+                User user = (User) objectInputStream.readObject();
+                if (user.getUserName().equals(userText.getText()) && user.getPassword().equals(passText.getText())){
+                    ShareData.setPlayer(user);
+                    Stage primaryStage = (Stage) userText.getScene().getWindow();
+                    Parent root = FXMLLoader.load(getClass().getResource("../View/MainMenu.fxml"));
+                    primaryStage.setTitle("MainMenu");
+                    primaryStage.setScene(new Scene(root));
+                    primaryStage.show();
+                    return;
+                }
+            }
+            error.setText("invalid username or password");
+        } catch (IOException | ClassNotFoundException e) {
+            e.printStackTrace();
         }
     }
 
+
     @FXML
-    void SignUp(ActionEvent event) throws IOException {
+    void SignUp() throws IOException {
         Stage primaryStage = (Stage) userText.getScene().getWindow();
         Parent root = FXMLLoader.load(getClass().getResource("../View/SignUp.fxml"));
         primaryStage.setTitle("SignUp");
         primaryStage.setScene(new Scene(root));
         primaryStage.show();
     }
-
 }
+

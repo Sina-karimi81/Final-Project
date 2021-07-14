@@ -9,31 +9,38 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #00ffff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.LoginController">
-   <children>
-      <ImageView fitHeight="475.0" fitWidth="290.0" layoutX="1.0" pickOnBounds="true">
-         <image>
-            <Image url="@../Photos/login.png" />
-         </image>
-      </ImageView>
-      <TextField fx:id="userText" layoutX="300.0" layoutY="147.0" prefHeight="26.0" prefWidth="290.0" promptText="Username" />
-      <Button layoutX="402.0" layoutY="269.0" mnemonicParsing="false" onAction="#Login" prefHeight="38.0" prefWidth="88.0" style="-fx-background-color: #00c5eb; -fx-background-radius: 10;" text="Login" textFill="#098017">
-         <font>
-            <Font name="System Bold" size="15.0" />
-         </font></Button>
-      <Button layoutX="414.0" layoutY="313.0" mnemonicParsing="false" onAction="#SignUp" prefHeight="31.0" prefWidth="63.0" style="-fx-background-color: #00ffff; -fx-background-radius: 10;" text="SignUp" textFill="#098017">
-         <font>
-            <Font size="13.0" />
-         </font></Button>
-      <Label alignment="TOP_CENTER" layoutX="318.0" layoutY="14.0" prefHeight="53.0" prefWidth="255.0" text="Clash Royal" textFill="#0e655d">
-         <font>
-            <Font name="System Bold Italic" size="36.0" />
-         </font></Label>
-      <Label layoutX="428.0" layoutY="67.0" text="login" textFill="#da0d0d">
-         <font>
-            <Font name="Arial Narrow Bold" size="18.0" />
-         </font>
-      </Label>
-      <PasswordField fx:id="passText" layoutX="300.0" layoutY="193.0" prefHeight="26.0" prefWidth="290.0" promptText="Password" />
-   </children>
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #00ffff;"
+            xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="Controller.LoginController">
+   <ImageView fitHeight="475.0" fitWidth="290.0" layoutX="1.0" pickOnBounds="true">
+      <Image url="@../Photos/login.png"/>
+   </ImageView>
+   <TextField fx:id="userText" layoutX="300.0" layoutY="147.0" prefHeight="26.0" prefWidth="290.0"
+              promptText="Username"/>
+   <Button layoutX="402.0" layoutY="269.0" mnemonicParsing="false" onAction="#Login" prefHeight="38.0" prefWidth="88.0"
+           style="-fx-background-color: #00c5eb; -fx-background-radius: 10;" text="Login" textFill="#098017">
+      <font>
+         <Font name="System Bold" size="15.0"/>
+      </font>
+   </Button>
+   <Button layoutX="414.0" layoutY="313.0" mnemonicParsing="false" onAction="#SignUp" prefHeight="31.0" prefWidth="63.0"
+           style="-fx-background-color: #00ffff; -fx-background-radius: 10;" text="SignUp" textFill="#098017">
+      <font>
+         <Font size="13.0"/>
+      </font>
+   </Button>
+   <Label alignment="TOP_CENTER" layoutX="318.0" layoutY="14.0" prefHeight="53.0" prefWidth="255.0" text="Clash Royal"
+          textFill="#0e655d">
+      <font>
+         <Font name="System Bold Italic" size="36.0"/>
+      </font>
+   </Label>
+   <Label layoutX="428.0" layoutY="67.0" text="login" textFill="#da0d0d">
+      <font>
+         <Font name="Arial Narrow Bold" size="18.0"/>
+      </font>
+   </Label>
+   <PasswordField fx:id="passText" layoutX="300.0" layoutY="193.0" prefHeight="26.0" prefWidth="290.0"
+                  promptText="Password"/>
+   <Label fx:id="error" layoutX="299.0" layoutY="126.0" prefHeight="21.0" prefWidth="290.0"/>
 </AnchorPane>
