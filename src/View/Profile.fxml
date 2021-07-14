@@ -29,12 +29,12 @@
             <Font size="15.0" />
          </font>
       </Label>
-      <Button layoutX="275.0" layoutY="348.0" mnemonicParsing="false" style="-fx-background-color: cyan; -fx-background-radius: 15;" text="Back" textFill="#016b2b">
+      <Button layoutX="275.0" layoutY="348.0" mnemonicParsing="false" onAction="#Back" style="-fx-background-color: cyan; -fx-background-radius: 15;" text="Back" textFill="#016b2b">
          <font>
             <Font size="15.0" />
          </font>
       </Button>
-      <Label layoutX="261.0" layoutY="240.0" style="-fx-background-color: cyan; -fx-background-radius: 5;" text="Label" textFill="#03842a">
+      <Label fx:id="Cups" layoutX="261.0" layoutY="240.0" style="-fx-background-color: cyan; -fx-background-radius: 5;" text="Label" textFill="#03842a">
          <font>
             <Font size="15.0" />
          </font>
@@ -44,12 +44,12 @@
             <Image url="@../Photos/Cups.png" />
          </image>
       </ImageView>
-      <Label layoutX="261.0" layoutY="151.0" style="-fx-background-color: cyan; -fx-background-radius: 5;" text="Label" textFill="#007126">
+      <Label fx:id="league" layoutX="261.0" layoutY="151.0" style="-fx-background-color: cyan; -fx-background-radius: 5;" text="Label" textFill="#007126">
          <font>
             <Font size="15.0" />
          </font>
       </Label>
-      <Label layoutX="261.0" layoutY="52.0" style="-fx-background-color: cyan; -fx-background-radius: 5;" text="Label" textFill="#02631c">
+      <Label fx:id="level" layoutX="261.0" layoutY="52.0" style="-fx-background-color: cyan; -fx-background-radius: 5;" text="Label" textFill="#02631c">
          <font>
             <Font size="15.0" />
          </font>
