@@ -12,14 +12,16 @@ public class User implements Serializable {
     private int level;
     private ArrayList<Card> deck;
     private ArrayList<GameHistory> gamesHistory;
+    private int cop;
 
-    public User(String userName, String password, int xp, int level) {
+    public User(String userName, String password, int xp, int level,int cop) {
         this.userName = userName;
         this.password = password;
         this.xp = xp;
         this.level = level;
         this.deck = new ArrayList<Card>();
         this.gamesHistory = new ArrayList<GameHistory>();
+        this.cop = cop;
     }
 
     public String getUserName() {
@@ -28,5 +30,25 @@ public class User implements Serializable {
 
     public String getPassword() {
         return password;
+    }
+
+    public int getXp() {
+        return xp;
+    }
+
+    public int getLevel() {
+        return level;
+    }
+
+    public ArrayList<Card> getDeck() {
+        return deck;
+    }
+
+    public ArrayList<GameHistory> getGamesHistory() {
+        return gamesHistory;
+    }
+
+    public int getCop() {
+        return cop;
     }
 }

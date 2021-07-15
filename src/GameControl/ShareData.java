@@ -16,4 +16,8 @@ public class ShareData {
     public static void setPlayer(User player) {
         ShareData.player = player;
     }
+
+    public static User getPlayer() {
+        return player;
+    }
 }

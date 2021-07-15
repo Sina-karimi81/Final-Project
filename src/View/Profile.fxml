@@ -7,54 +7,46 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="Controller.Profile">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.Profile">
    <ImageView fitHeight="406.0" fitWidth="601.0" layoutY="-1.0" pickOnBounds="true">
-      <Image url="@../Photos/backGround.png"/>
+      <Image url="@../Photos/backGround.png" />
    </ImageView>
-   <Label fx:id="ProfileLabel1" layoutX="50.0" layoutY="49.0" prefHeight="22.0" prefWidth="45.0"
-          style="-fx-background-color: cyan; -fx-background-radius: 7;" text="Level" textFill="#098403">
+   <Label layoutX="50.0" layoutY="49.0" prefHeight="22.0" prefWidth="45.0" style="-fx-background-color: cyan; -fx-background-radius: 7;" text="Level" textFill="#098403">
       <font>
-         <Font name="System Bold Italic" size="15.0"/>
+         <Font name="System Bold Italic" size="15.0" />
       </font>
    </Label>
-   <Label layoutX="49.0" layoutY="148.0" prefHeight="22.0" prefWidth="46.0"
-          style="-fx-background-color: cyan; -fx-background-radius: 5;" text="league" textFill="#007e22">
+   <Label layoutX="49.0" layoutY="148.0" prefHeight="22.0" prefWidth="46.0" style="-fx-background-color: cyan; -fx-background-radius: 5;" text="league" textFill="#007e22">
       <font>
-         <Font size="15.0"/>
+         <Font size="15.0" />
       </font>
    </Label>
-   <Label layoutX="55.0" layoutY="240.0" style="-fx-background-color: cyan; -fx-background-radius: 5;" text="Cups"
-          textFill="#066e04">
+   <Label layoutX="55.0" layoutY="240.0" style="-fx-background-color: cyan; -fx-background-radius: 5;" text="Cups" textFill="#066e04">
       <font>
-         <Font size="15.0"/>
+         <Font size="15.0" />
       </font>
    </Label>
-   <Button layoutX="275.0" layoutY="348.0" mnemonicParsing="false"
-           style="-fx-background-color: cyan; -fx-background-radius: 15;" text="Back" textFill="#016b2b">
+   <Button layoutX="275.0" layoutY="348.0" mnemonicParsing="false" onAction="#back" style="-fx-background-color: cyan; -fx-background-radius: 15;" text="Back" textFill="#016b2b">
       <font>
-         <Font size="15.0"/>
+         <Font size="15.0" />
       </font>
    </Button>
-   <Label layoutX="261.0" layoutY="240.0" style="-fx-background-color: cyan; -fx-background-radius: 5;" text="Label"
-          textFill="#03842a">
+   <Label fx:id="cupsLabel" layoutX="261.0" layoutY="240.0" style="-fx-background-color: cyan; -fx-background-radius: 5;" text="Label" textFill="#03842a">
       <font>
-         <Font size="15.0"/>
+         <Font size="15.0" />
       </font>
    </Label>
    <ImageView fitHeight="31.0" fitWidth="34.0" layoutX="310.0" layoutY="235.0" pickOnBounds="true">
-      <Image url="@../Photos/Cups.png"/>
+      <Image url="@../Photos/Cups.png" />
    </ImageView>
-   <Label layoutX="261.0" layoutY="151.0" style="-fx-background-color: cyan; -fx-background-radius: 5;" text="Label"
-          textFill="#007126">
+   <Label fx:id="leagueLabel" layoutX="261.0" layoutY="151.0" style="-fx-background-color: cyan; -fx-background-radius: 5;" text="Label" textFill="#007126">
       <font>
-         <Font size="15.0"/>
+         <Font size="15.0" />
       </font>
    </Label>
-   <Label layoutX="261.0" layoutY="52.0" style="-fx-background-color: cyan; -fx-background-radius: 5;" text="Label"
-          textFill="#02631c">
+   <Label fx:id="levelLabel" layoutX="261.0" layoutY="52.0" style="-fx-background-color: cyan; -fx-background-radius: 5;" text="Label" textFill="#02631c">
       <font>
-         <Font size="15.0"/>
+         <Font size="15.0" />
       </font>
    </Label>
 </AnchorPane>

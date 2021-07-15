@@ -51,7 +51,7 @@ public class SignUpController {
                 } catch (ClassNotFoundException e) {
                     e.printStackTrace();
                 }
-                User user = new User(username, password, 0, 1);
+                User user = new User(username, password, 0, 1,0);
                 ShareData.setPlayer(user);
                 saveToFile(user);
                 Stage primaryStage = (Stage) SignPass.getScene().getWindow();
