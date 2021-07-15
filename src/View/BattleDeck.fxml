@@ -7,107 +7,83 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="1200.0" prefWidth="602.0" xmlns="http://javafx.com/javafx/16"
-            xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.BattleDeck">
+<AnchorPane prefHeight="1200.0" prefWidth="602.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.BattleDeck">
    <ImageView fitHeight="1200.0" fitWidth="602.0" pickOnBounds="true">
-      <Image url="@../Photos/backGround.png"/>
+      <Image url="@../Photos/backGround.png" />
    </ImageView>
-   <ImageView fx:id="Image1" fitHeight="150.0" fitWidth="200.0" layoutX="14.0" layoutY="120.0" pickOnBounds="true"
-              preserveRatio="true">
-      <Image url="@../Photos/clash-royal-archers.png"/>
+   <ImageView fx:id="Image1" fitHeight="150.0" fitWidth="200.0" layoutX="14.0" layoutY="120.0" onDragDropped="#handleDragDrop1" onDragOver="#handleDragOver1" pickOnBounds="true" preserveRatio="true">
+      <Image url="@../Photos/clash-royal-archers.png" />
    </ImageView>
-   <ImageView fx:id="Image2" fitHeight="150.0" fitWidth="200.0" layoutX="156.0" layoutY="120.0" pickOnBounds="true"
-              preserveRatio="true">
-      <Image url="@../Photos/clash-royal-barbarians.png"/>
+   <ImageView fx:id="Image2" fitHeight="150.0" fitWidth="200.0" layoutX="156.0" layoutY="120.0" onDragDropped="#handleDragDrop2" onDragOver="#handleDragOver2" pickOnBounds="true" preserveRatio="true">
+      <Image url="@../Photos/clash-royal-barbarians.png" />
    </ImageView>
-   <ImageView fx:id="Image3" fitHeight="150.0" fitWidth="200.0" layoutX="301.0" layoutY="120.0" pickOnBounds="true"
-              preserveRatio="true">
-      <Image url="@../Photos/clash-royal-cannon.png"/>
+   <ImageView fx:id="Image3" fitHeight="150.0" fitWidth="200.0" layoutX="301.0" layoutY="120.0" onDragDropped="#handleDragDrop3" onDragOver="#handleDragOver3" pickOnBounds="true" preserveRatio="true">
+      <Image url="@../Photos/clash-royal-cannon.png" />
    </ImageView>
-   <ImageView fx:id="Image4" fitHeight="150.0" fitWidth="200.0" layoutX="462.0" layoutY="120.0" pickOnBounds="true"
-              preserveRatio="true">
-      <Image url="@../Photos/clash-royal-baby-dragon.png"/>
+   <ImageView fx:id="Image4" fitHeight="150.0" fitWidth="200.0" layoutX="462.0" layoutY="120.0" onDragDropped="#handleDragDrop4" onDragOver="#handleDragOver4" pickOnBounds="true" preserveRatio="true">
+      <Image url="@../Photos/clash-royal-baby-dragon.png" />
    </ImageView>
-   <ImageView fx:id="Image5" fitHeight="150.0" fitWidth="200.0" layoutX="14.0" layoutY="298.0" pickOnBounds="true"
-              preserveRatio="true">
-      <Image url="@../Photos/clash-royal-giant.png"/>
+   <ImageView fx:id="Image5" fitHeight="150.0" fitWidth="200.0" layoutX="14.0" layoutY="298.0" onDragDropped="#handleDragDrop5" onDragOver="#handleDragOver5" pickOnBounds="true" preserveRatio="true">
+      <Image url="@../Photos/clash-royal-giant.png" />
    </ImageView>
-   <ImageView fx:id="Image6" fitHeight="150.0" fitWidth="200.0" layoutX="156.0" layoutY="298.0" pickOnBounds="true"
-              preserveRatio="true">
-      <Image url="@../Photos/clash-royal-wizard.png"/>
+   <ImageView fx:id="Image6" fitHeight="150.0" fitWidth="200.0" layoutX="156.0" layoutY="298.0" onDragDropped="#handleDragDrop6" onDragOver="#handleDragOver6" pickOnBounds="true" preserveRatio="true">
+      <Image url="@../Photos/clash-royal-wizard.png" />
    </ImageView>
-   <ImageView fx:id="Image7" fitHeight="150.0" fitWidth="200.0" layoutX="301.0" layoutY="298.0" pickOnBounds="true"
-              preserveRatio="true">
-      <Image url="@../Photos/clash-royal-valkyrie.png"/>
+   <ImageView fx:id="Image7" fitHeight="150.0" fitWidth="200.0" layoutX="301.0" layoutY="298.0" onDragDropped="#handleDragDrop7" onDragOver="#handleDragOver7" pickOnBounds="true" preserveRatio="true">
+      <Image url="@../Photos/clash-royal-valkyrie.png" />
    </ImageView>
-   <ImageView fx:id="Image8" fitHeight="150.0" fitWidth="200.0" layoutX="462.0" layoutY="298.0" pickOnBounds="true"
-              preserveRatio="true">
-      <Image url="@../Photos/clash-royal-mini-pekka.png"/>
+   <ImageView fx:id="Image8" fitHeight="150.0" fitWidth="200.0" layoutX="462.0" layoutY="298.0" onDragDropped="#handleDragDrop8" onDragOver="#handleDragOver8" pickOnBounds="true" preserveRatio="true">
+      <Image url="@../Photos/clash-royal-mini-pekka.png" />
    </ImageView>
-   <Label layoutX="234.0" layoutY="46.0" prefHeight="22.0" prefWidth="125.0"
-          style="-fx-background-color: cyan; -fx-background-radius: 20;" text="Your Battle Deck" textFill="#009405">
+   <Label layoutX="234.0" layoutY="46.0" prefHeight="22.0" prefWidth="125.0" style="-fx-background-color: cyan; -fx-background-radius: 20;" text="Your Battle Deck" textFill="#009405">
       <font>
-         <Font name="System Bold Italic" size="15.0"/>
+         <Font name="System Bold Italic" size="15.0" />
       </font>
    </Label>
-   <Label layoutX="263.0" layoutY="478.0" style="-fx-background-color: cyan; -fx-background-radius: 7;"
-          text="Your Cards" textFill="#008c1e">
+   <Label layoutX="263.0" layoutY="478.0" style="-fx-background-color: cyan; -fx-background-radius: 7;" text="Your Cards" textFill="#008c1e">
       <font>
-         <Font name="System Bold Italic" size="15.0"/>
+         <Font name="System Bold Italic" size="15.0" />
       </font>
    </Label>
-   <ImageView fx:id="Card1" fitHeight="150.0" fitWidth="200.0" layoutX="14.0" layoutY="527.0" pickOnBounds="true"
-              preserveRatio="true">
-      <Image url="@../Photos/clash-royal-archers.png"/>
+   <ImageView fx:id="Card1" fitHeight="150.0" fitWidth="200.0" layoutX="14.0" layoutY="527.0" onDragDetected="#handleDragDetected1" pickOnBounds="true" preserveRatio="true">
+      <Image url="@../Photos/clash-royal-archers.png" />
    </ImageView>
-   <ImageView fx:id="Card2" fitHeight="150.0" fitWidth="200.0" layoutX="156.0" layoutY="527.0" pickOnBounds="true"
-              preserveRatio="true">
-      <Image url="@../Photos/clash-royal-barbarians.png"/>
+   <ImageView fx:id="Card2" fitHeight="150.0" fitWidth="200.0" layoutX="156.0" layoutY="525.0" onDragDetected="#handleDragDetected2" pickOnBounds="true" preserveRatio="true">
+      <Image url="@../Photos/clash-royal-barbarians.png" />
    </ImageView>
-   <ImageView fx:id="Card3" fitHeight="150.0" fitWidth="200.0" layoutX="301.0" layoutY="527.0" pickOnBounds="true"
-              preserveRatio="true">
-      <Image url="@../Photos/clash-royal-cannon.png"/>
+   <ImageView fx:id="Card3" fitHeight="150.0" fitWidth="200.0" layoutX="301.0" layoutY="527.0" onDragDetected="#handleDragDetected3" pickOnBounds="true" preserveRatio="true">
+      <Image url="@../Photos/clash-royal-cannon.png" />
    </ImageView>
-   <ImageView fx:id="Card4" fitHeight="150.0" fitWidth="200.0" layoutX="462.0" layoutY="527.0" pickOnBounds="true"
-              preserveRatio="true">
-      <Image url="@../Photos/clash-royal-baby-dragon.png"/>
+   <ImageView fx:id="Card4" fitHeight="150.0" fitWidth="200.0" layoutX="462.0" layoutY="527.0" onDragDetected="#handleDragDetected4" pickOnBounds="true" preserveRatio="true">
+      <Image url="@../Photos/clash-royal-baby-dragon.png" />
    </ImageView>
-   <ImageView fx:id="Card5" fitHeight="150.0" fitWidth="200.0" layoutX="14.0" layoutY="705.0" pickOnBounds="true"
-              preserveRatio="true">
-      <Image url="@../Photos/clash-royal-giant.png"/>
+   <ImageView fx:id="Card5" fitHeight="150.0" fitWidth="200.0" layoutX="14.0" layoutY="705.0" onDragDetected="#handleDragDetected5" pickOnBounds="true" preserveRatio="true">
+      <Image url="@../Photos/clash-royal-giant.png" />
    </ImageView>
-   <ImageView fx:id="Card6" fitHeight="150.0" fitWidth="200.0" layoutX="156.0" layoutY="705.0" pickOnBounds="true"
-              preserveRatio="true">
-      <Image url="@../Photos/clash-royal-wizard.png"/>
+   <ImageView fx:id="Card6" fitHeight="150.0" fitWidth="200.0" layoutX="156.0" layoutY="705.0" onDragDetected="#handleDragDetected6" pickOnBounds="true" preserveRatio="true">
+      <Image url="@../Photos/clash-royal-wizard.png" />
    </ImageView>
-   <ImageView fx:id="Card7" fitHeight="150.0" fitWidth="200.0" layoutX="301.0" layoutY="705.0" pickOnBounds="true"
-              preserveRatio="true">
-      <Image url="@../Photos/clash-royal-valkyrie.png"/>
+   <ImageView fx:id="Card7" fitHeight="150.0" fitWidth="200.0" layoutX="301.0" layoutY="705.0" onDragDetected="#handleDragDetected7" pickOnBounds="true" preserveRatio="true">
+      <Image url="@../Photos/clash-royal-valkyrie.png" />
    </ImageView>
-   <ImageView fx:id="Card8" fitHeight="150.0" fitWidth="200.0" layoutX="462.0" layoutY="705.0" pickOnBounds="true"
-              preserveRatio="true">
-      <Image url="@../Photos/clash-royal-mini-pekka.png"/>
+   <ImageView fx:id="Card8" fitHeight="150.0" fitWidth="200.0" layoutX="462.0" layoutY="705.0" onDragDetected="#handleDragDetected8" pickOnBounds="true" preserveRatio="true">
+      <Image url="@../Photos/clash-royal-mini-pekka.png" />
    </ImageView>
-   <ImageView fx:id="Card9" fitHeight="150.0" fitWidth="200.0" layoutX="10.0" layoutY="863.0" pickOnBounds="true"
-              preserveRatio="true">
-      <Image url="@../Photos/clash-royal-arrows.png"/>
+   <ImageView fx:id="Card9" fitHeight="150.0" fitWidth="200.0" layoutX="10.0" layoutY="863.0" onDragDetected="#handleDragDetected9" pickOnBounds="true" preserveRatio="true">
+      <Image url="@../Photos/clash-royal-arrows.png" />
    </ImageView>
-   <ImageView fx:id="Card10" fitHeight="150.0" fitWidth="200.0" layoutX="152.0" layoutY="863.0" pickOnBounds="true"
-              preserveRatio="true">
-      <Image url="@../Photos/clash-royal-fireball.png"/>
+   <ImageView fx:id="Card10" fitHeight="150.0" fitWidth="200.0" layoutX="152.0" layoutY="863.0" onDragDetected="#handleDragDetected10" pickOnBounds="true" preserveRatio="true">
+      <Image url="@../Photos/clash-royal-fireball.png" />
    </ImageView>
-   <ImageView fx:id="Card11" fitHeight="150.0" fitWidth="200.0" layoutX="297.0" layoutY="863.0" pickOnBounds="true"
-              preserveRatio="true">
-      <Image url="@../Photos/clash-royal-rage.png"/>
+   <ImageView fx:id="Card11" fitHeight="150.0" fitWidth="200.0" layoutX="297.0" layoutY="863.0" onDragDetected="#handleDragDetected11" pickOnBounds="true" preserveRatio="true">
+      <Image url="@../Photos/clash-royal-rage.png" />
    </ImageView>
-   <ImageView fx:id="Card12" fitHeight="150.0" fitWidth="200.0" layoutX="458.0" layoutY="863.0" pickOnBounds="true"
-              preserveRatio="true">
-      <Image url="@../Photos/clash-royal-inferno-tower.png"/>
+   <ImageView fx:id="Card12" fitHeight="150.0" fitWidth="200.0" layoutX="458.0" layoutY="863.0" onDragDetected="#handleDragDetected12" pickOnBounds="true" preserveRatio="true">
+      <Image url="@../Photos/clash-royal-inferno-tower.png" />
    </ImageView>
-   <Button layoutX="271.0" layoutY="1112.0" mnemonicParsing="false"
-           style="-fx-background-color: cyan; -fx-background-radius: 10;" text="Back" textFill="#008e1a">
+   <Button layoutX="271.0" layoutY="1112.0" mnemonicParsing="false" onAction="#Back" style="-fx-background-color: cyan; -fx-background-radius: 10;" text="Back" textFill="#008e1a">
       <font>
-         <Font name="System Bold Italic" size="15.0"/>
+         <Font name="System Bold Italic" size="15.0" />
       </font>
    </Button>
 </AnchorPane>
