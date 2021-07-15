@@ -14,6 +14,7 @@ import java.io.IOException;
 
 public class BattleDeck {
 
+    private ImageView imageView;
     @FXML
     private ImageView Image1;
 
@@ -39,30 +40,6 @@ public class BattleDeck {
     private ImageView Image8;
 
     @FXML
-    private ImageView Card1;
-
-    @FXML
-    private ImageView Card2;
-
-    @FXML
-    private ImageView Card3;
-
-    @FXML
-    private ImageView Card4;
-
-    @FXML
-    private ImageView Card5;
-
-    @FXML
-    private ImageView Card6;
-
-    @FXML
-    private ImageView Card7;
-
-    @FXML
-    private ImageView Card8;
-
-    @FXML
     private ImageView Card9;
 
     @FXML
@@ -74,226 +51,159 @@ public class BattleDeck {
     @FXML
     private ImageView Card12;
 
-   @FXML
-    void handleDragDetected1(MouseEvent event)
-    {
-        Dragboard db = Card1.startDragAndDrop(TransferMode.ANY);
-        ClipboardContent cb =  new ClipboardContent();
-        cb.putImage(Card1.getImage());
-        db.setContent(cb);
-        event.consume();
-    }
+
     @FXML
-    void handleDragDetected2(MouseEvent event)
-    {
-        Dragboard db = Card2.startDragAndDrop(TransferMode.ANY);
-        ClipboardContent cb =  new ClipboardContent();
-        cb.putImage(Card2.getImage());
-        db.setContent(cb);
-        event.consume();
-    }
-    @FXML
-    void handleDragDetected3(MouseEvent event)
-    {
-        Dragboard db = Card3.startDragAndDrop(TransferMode.ANY);
-        ClipboardContent cb =  new ClipboardContent();
-        cb.putImage(Card3.getImage());
-        db.setContent(cb);
-        event.consume();
-    }
-    @FXML
-    void handleDragDetected4(MouseEvent event)
-    {
-        Dragboard db = Card4.startDragAndDrop(TransferMode.ANY);
-        ClipboardContent cb =  new ClipboardContent();
-        cb.putImage(Card4.getImage());
-        db.setContent(cb);
-        event.consume();
-    }
-    @FXML
-    void handleDragDetected5(MouseEvent event)
-    {
-        Dragboard db = Card5.startDragAndDrop(TransferMode.ANY);
-        ClipboardContent cb =  new ClipboardContent();
-        cb.putImage(Card5.getImage());
-        db.setContent(cb);
-        event.consume();
-    }
-    @FXML
-    void handleDragDetected6(MouseEvent event)
-    {
-        Dragboard db = Card6.startDragAndDrop(TransferMode.ANY);
-        ClipboardContent cb =  new ClipboardContent();
-        cb.putImage(Card6.getImage());
-        db.setContent(cb);
-        event.consume();
-    }
-    @FXML
-    void handleDragDetected7(MouseEvent event)
-    {
-        Dragboard db = Card7.startDragAndDrop(TransferMode.ANY);
-        ClipboardContent cb =  new ClipboardContent();
-        cb.putImage(Card7.getImage());
-        db.setContent(cb);
-        event.consume();
-    }
-    @FXML
-    void handleDragDetected8(MouseEvent event)
-    {
-        Dragboard db = Card8.startDragAndDrop(TransferMode.ANY);
-        ClipboardContent cb =  new ClipboardContent();
-        cb.putImage(Card8.getImage());
-        db.setContent(cb);
-        event.consume();
-    }
-    @FXML
-    void handleDragDetected9(MouseEvent event)
-    {
+    void handleDragDetected9(MouseEvent event) {
+        imageView = Card9;
         Dragboard db = Card9.startDragAndDrop(TransferMode.ANY);
-        ClipboardContent cb =  new ClipboardContent();
+        ClipboardContent cb = new ClipboardContent();
         cb.putImage(Card9.getImage());
         db.setContent(cb);
         event.consume();
     }
+
     @FXML
-    void handleDragDetected10(MouseEvent event)
-    {
+    void handleDragDetected10(MouseEvent event) {
+        imageView = Card10;
         Dragboard db = Card10.startDragAndDrop(TransferMode.ANY);
-        ClipboardContent cb =  new ClipboardContent();
+        ClipboardContent cb = new ClipboardContent();
         cb.putImage(Card10.getImage());
         db.setContent(cb);
         event.consume();
     }
+
     @FXML
-    void handleDragDetected11(MouseEvent event)
-    {
+    void handleDragDetected11(MouseEvent event) {
+        imageView = Card11;
         Dragboard db = Card11.startDragAndDrop(TransferMode.ANY);
-        ClipboardContent cb =  new ClipboardContent();
+        ClipboardContent cb = new ClipboardContent();
         cb.putImage(Card11.getImage());
         db.setContent(cb);
         event.consume();
     }
+
     @FXML
-    void handleDragDetected12(MouseEvent event)
-    {
+    void handleDragDetected12(MouseEvent event) {
+        imageView = Card12;
         Dragboard db = Card12.startDragAndDrop(TransferMode.ANY);
-        ClipboardContent cb =  new ClipboardContent();
+        ClipboardContent cb = new ClipboardContent();
         cb.putImage(Card12.getImage());
         db.setContent(cb);
         event.consume();
     }
+
     @FXML
-    void handleDragOver1(DragEvent event)
-    {
-        if(event.getDragboard().hasImage())
-        {
+    void handleDragOver1(DragEvent event) {
+        if (event.getDragboard().hasImage()) {
             event.acceptTransferModes(TransferMode.ANY);
         }
     }
+
     @FXML
-    void handleDragDrop1(DragEvent event)
-    {
+    void handleDragDrop1(DragEvent event) {
         Image img = event.getDragboard().getImage();
+        imageView.setImage(Image1.getImage());
         Image1.setImage(img);
     }
+
     @FXML
-    void handleDragOver2(DragEvent event)
-    {
-        if(event.getDragboard().hasImage())
-        {
+    void handleDragOver2(DragEvent event) {
+        if (event.getDragboard().hasImage()) {
             event.acceptTransferModes(TransferMode.ANY);
         }
     }
+
     @FXML
-    void handleDragDrop2(DragEvent event)
-    {
+    void handleDragDrop2(DragEvent event) {
         Image img = event.getDragboard().getImage();
+        imageView.setImage(Image2.getImage());
         Image2.setImage(img);
     }
+
     @FXML
-    void handleDragOver3(DragEvent event)
-    {
-        if(event.getDragboard().hasImage())
-        {
+    void handleDragOver3(DragEvent event) {
+        if (event.getDragboard().hasImage()) {
             event.acceptTransferModes(TransferMode.ANY);
         }
     }
+
     @FXML
-    void handleDragDrop3(DragEvent event)
-    {
+    void handleDragDrop3(DragEvent event) {
         Image img = event.getDragboard().getImage();
+        imageView.setImage(Image3.getImage());
         Image3.setImage(img);
     }
+
     @FXML
-    void handleDragOver4(DragEvent event)
-    {
-        if(event.getDragboard().hasImage())
-        {
+    void handleDragOver4(DragEvent event) {
+        if (event.getDragboard().hasImage()) {
             event.acceptTransferModes(TransferMode.ANY);
         }
     }
+
     @FXML
-    void handleDragDrop4(DragEvent event)
-    {
+    void handleDragDrop4(DragEvent event) {
         Image img = event.getDragboard().getImage();
+        imageView.setImage(Image4.getImage());
         Image4.setImage(img);
     }
+
     @FXML
-    void handleDragOver5(DragEvent event)
-    {
-        if(event.getDragboard().hasImage())
-        {
+    void handleDragOver5(DragEvent event) {
+        if (event.getDragboard().hasImage()) {
             event.acceptTransferModes(TransferMode.ANY);
         }
     }
+
     @FXML
-    void handleDragDrop5(DragEvent event)
-    {
+    void handleDragDrop5(DragEvent event) {
         Image img = event.getDragboard().getImage();
+        imageView.setImage(Image5.getImage());
         Image5.setImage(img);
     }
+
     @FXML
-    void handleDragOver6(DragEvent event)
-    {
-        if(event.getDragboard().hasImage())
-        {
+    void handleDragOver6(DragEvent event) {
+        if (event.getDragboard().hasImage()) {
             event.acceptTransferModes(TransferMode.ANY);
         }
     }
+
     @FXML
-    void handleDragDrop6(DragEvent event)
-    {
+    void handleDragDrop6(DragEvent event) {
         Image img = event.getDragboard().getImage();
+        imageView.setImage(Image6.getImage());
         Image6.setImage(img);
     }
+
     @FXML
-    void handleDragOver7(DragEvent event)
-    {
-        if(event.getDragboard().hasImage())
-        {
+    void handleDragOver7(DragEvent event) {
+        if (event.getDragboard().hasImage()) {
             event.acceptTransferModes(TransferMode.ANY);
         }
     }
+
     @FXML
-    void handleDragDrop7(DragEvent event)
-    {
+    void handleDragDrop7(DragEvent event) {
         Image img = event.getDragboard().getImage();
+        imageView.setImage(Image7.getImage());
         Image7.setImage(img);
     }
+
     @FXML
-    void handleDragOver8(DragEvent event)
-    {
-        if(event.getDragboard().hasImage())
-        {
+    void handleDragOver8(DragEvent event) {
+        if (event.getDragboard().hasImage()) {
             event.acceptTransferModes(TransferMode.ANY);
         }
     }
+
     @FXML
-    void handleDragDrop8(DragEvent event)
-    {
+    void handleDragDrop8(DragEvent event) {
         Image img = event.getDragboard().getImage();
+        imageView.setImage(Image8.getImage());
         Image8.setImage(img);
     }
+
     @FXML
     void Back(ActionEvent event) throws IOException {
         Stage primaryStage = (Stage) Image1.getScene().getWindow();
