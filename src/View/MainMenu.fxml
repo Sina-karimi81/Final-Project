@@ -5,7 +5,7 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.MainMenuController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.MainMenuController">
    <ImageView fitHeight="400.0" fitWidth="600.0" layoutY="-1.0" pickOnBounds="true">
       <Image url="@../Photos/33.jpg" />
    </ImageView>
@@ -13,4 +13,6 @@
    <Button layoutX="408.0" layoutY="153.0" mnemonicParsing="false" onAction="#ShowDeck" text="Battle Deck" />
    <Button layoutX="408.0" layoutY="200.0" mnemonicParsing="false" onAction="#showHistory" text="Battle History" />
    <Button layoutX="408.0" layoutY="244.0" mnemonicParsing="false" onAction="#trainBots" text="Train with Bots" />
+   <Button layoutX="407.0" layoutY="288.0" mnemonicParsing="false" onAction="#logout" text="Logout" />
+   <Button layoutX="407.0" layoutY="331.0" mnemonicParsing="false" onAction="#exit" text="Exit" />
 </AnchorPane>

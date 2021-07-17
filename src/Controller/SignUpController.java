@@ -2,13 +2,12 @@ package Controller;
 
 import GameControl.ShareData;
 import Players.User;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Label;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.stage.Stage;
 
 import java.io.*;
@@ -71,5 +70,18 @@ public class SignUpController {
         }
     }
 
+    @FXML
+    void exit(ActionEvent event)
+    {
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        alert.setTitle("Exit");
+        alert.setHeaderText("You're about to exit the game!");
+        alert.setContentText("Are Sure You Want To Exit?");
+        if(alert.showAndWait().get() == ButtonType.OK)
+        {
+            Stage primaryStage = (Stage) SignPass.getScene().getWindow();
+            primaryStage.close();
+        }
+    }
 }
 
