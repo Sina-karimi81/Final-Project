@@ -1,5 +1,59 @@
 package GameControl;
 
+import Cards.*;
+import javafx.scene.image.Image;
+
+import java.util.ArrayList;
+
 public class DataManager {
 
+
+    public static Card findCard(Image image){
+        ArrayList<Card> cards = ShareData.getCards();
+        for (Card c: cards) {
+            if (c.getImageView().getUrl().equals(image.getUrl()))
+                return c;
+        }
+        return null;
+    }
+
+    public static void setDeck(ArrayList<Card> deck){
+        ShareData.getPlayer().setDeck(deck);
+    }
+
+    public static void starterShareData(){
+        ArrayList<Card> cards = new ArrayList<>();
+        start(cards);
+    }
+
+    static void start(ArrayList<Card> cards) {
+        cards.add(new Giant("../Photos/clash-royal-giant.png"));
+        cards.add(new Archer("../Photos/clash-royal-archers.png"));
+        cards.add(new Dragon("../Photos/clash-royal-baby-dragon.png"));
+        cards.add(new Barbarian("../Photos/clash-royal-barbarians.png"));
+        cards.add(new Cannon("../Photos/clash-royal-cannon.png"));
+        cards.add(new Wizard("../Photos/clash-royal-wizard.png"));
+        cards.add(new Valkyrie("../Photos/clash-royal-valkyrie.png"));
+        cards.add(new Pekka("../Photos/clash-royal-mini-pekka.png"));
+        cards.add(new Arrow("../Photos/clash-royal-arrows.png"));
+        cards.add(new FireBall("../Photos/clash-royal-fireball.png"));
+        cards.add(new Rage("../Photos/clash-royal-rage.png"));
+        cards.add(new Inferno("../Photos/clash-royal-inferno-tower.png"));
+        ShareData.setCards(cards);
+    }
+    public static void deckDefault(){
+        ArrayList<Card> deck = new ArrayList<>();
+        ArrayList<Card> cards = ShareData.getCards();
+        for (int i = 0; i<=7; ++i) {
+            deck.add(cards.get(i));
+        }
+        ShareData.getPlayer().setDeck(deck);
+    }
+
+    public static void setImageDeck(){
+        ArrayList<Card> cards = ShareData.getPlayer().getDeck();
+        for (Card c: cards) {
+            c.setImageCard();
+        }
+    }
 }
