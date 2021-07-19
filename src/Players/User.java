@@ -1,16 +1,18 @@
 package Players;
 
 import Cards.Card;
+import Towers.Tower;
 
 import java.io.Serializable;
 import java.util.ArrayList;
 
 public class User implements Serializable {
-    private String userName;
-    private String password;
+    private final String userName;
+    private final String password;
     private int xp;
     private int level;
     private ArrayList<Card> deck;
+    private ArrayList<Tower> towers;
     private ArrayList<GameHistory> gamesHistory;
     private int cop;
 
@@ -19,8 +21,28 @@ public class User implements Serializable {
         this.password = password;
         this.xp = xp;
         this.level = level;
-        this.deck = new ArrayList<Card>();
-        this.gamesHistory = new ArrayList<GameHistory>();
+        this.deck = new ArrayList<>();
+        this.gamesHistory = new ArrayList<>();
+        this.cop = cop;
+    }
+
+    public void setXp(int xp) {
+        this.xp = xp;
+    }
+
+    public void setLevel(int level) {
+        this.level = level;
+    }
+
+    public void setDeck(ArrayList<Card> deck) {
+        this.deck = deck;
+    }
+
+    public void setGamesHistory(ArrayList<GameHistory> gamesHistory) {
+        this.gamesHistory = gamesHistory;
+    }
+
+    public void setCop(int cop) {
         this.cop = cop;
     }
 
