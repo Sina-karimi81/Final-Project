@@ -1,8 +1,11 @@
 package Controller;
 
-import javafx.event.ActionEvent;
+import Cards.Card;
+import GameControl.DataManager;
+import GameControl.ShareData;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
@@ -11,8 +14,13 @@ import javafx.scene.input.*;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.net.URL;
+import java.util.ArrayList;
+import java.util.ResourceBundle;
 
-public class BattleDeck {
+public class BattleDeck implements Initializable{
+
+    private ArrayList<ImageView> imageViews;
 
     private ImageView imageView;
     @FXML
@@ -100,8 +108,8 @@ public class BattleDeck {
     }
 
     @FXML
-    void handleDragDrop1(DragEvent event) {
-        Image img = event.getDragboard().getImage();
+    void handleDragDrop1() {
+        Image img = imageView.getImage();
         imageView.setImage(Image1.getImage());
         Image1.setImage(img);
     }
@@ -114,8 +122,8 @@ public class BattleDeck {
     }
 
     @FXML
-    void handleDragDrop2(DragEvent event) {
-        Image img = event.getDragboard().getImage();
+    void handleDragDrop2() {
+        Image img = imageView.getImage();
         imageView.setImage(Image2.getImage());
         Image2.setImage(img);
     }
@@ -128,8 +136,8 @@ public class BattleDeck {
     }
 
     @FXML
-    void handleDragDrop3(DragEvent event) {
-        Image img = event.getDragboard().getImage();
+    void handleDragDrop3() {
+        Image img = imageView.getImage();
         imageView.setImage(Image3.getImage());
         Image3.setImage(img);
     }
@@ -142,8 +150,8 @@ public class BattleDeck {
     }
 
     @FXML
-    void handleDragDrop4(DragEvent event) {
-        Image img = event.getDragboard().getImage();
+    void handleDragDrop4() {
+        Image img = imageView.getImage();
         imageView.setImage(Image4.getImage());
         Image4.setImage(img);
     }
@@ -156,8 +164,8 @@ public class BattleDeck {
     }
 
     @FXML
-    void handleDragDrop5(DragEvent event) {
-        Image img = event.getDragboard().getImage();
+    void handleDragDrop5() {
+        Image img = imageView.getImage();
         imageView.setImage(Image5.getImage());
         Image5.setImage(img);
     }
@@ -170,8 +178,8 @@ public class BattleDeck {
     }
 
     @FXML
-    void handleDragDrop6(DragEvent event) {
-        Image img = event.getDragboard().getImage();
+    void handleDragDrop6() {
+        Image img = imageView.getImage();
         imageView.setImage(Image6.getImage());
         Image6.setImage(img);
     }
@@ -184,8 +192,8 @@ public class BattleDeck {
     }
 
     @FXML
-    void handleDragDrop7(DragEvent event) {
-        Image img = event.getDragboard().getImage();
+    void handleDragDrop7() {
+        Image img = imageView.getImage();
         imageView.setImage(Image7.getImage());
         Image7.setImage(img);
     }
@@ -198,18 +206,49 @@ public class BattleDeck {
     }
 
     @FXML
-    void handleDragDrop8(DragEvent event) {
-        Image img = event.getDragboard().getImage();
+    void handleDragDrop8() {
+        Image img = imageView.getImage();
         imageView.setImage(Image8.getImage());
         Image8.setImage(img);
     }
 
     @FXML
-    void Back(ActionEvent event) throws IOException {
+    void Back() throws IOException {
+        ArrayList<Card> deck = new ArrayList<>();
+        deck.add(DataManager.findCard(Image1.getImage()));
+        deck.add(DataManager.findCard(Image2.getImage()));
+        deck.add(DataManager.findCard(Image3.getImage()));
+        deck.add(DataManager.findCard(Image4.getImage()));
+        deck.add(DataManager.findCard(Image5.getImage()));
+        deck.add(DataManager.findCard(Image6.getImage()));
+        deck.add(DataManager.findCard(Image7.getImage()));
+        deck.add(DataManager.findCard(Image8.getImage()));
+        DataManager.setDeck(deck);
+
         Stage primaryStage = (Stage) Image1.getScene().getWindow();
         Parent root = FXMLLoader.load(getClass().getResource("../View/MainMenu.fxml"));
         primaryStage.setTitle("MainMenu");
         primaryStage.setScene(new Scene(root));
         primaryStage.show();
+    }
+
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+        ArrayList<Card> cards = ShareData.getPlayer().getDeck();
+        ArrayList<Card> cards1 = (ArrayList<Card>) ShareData.getCards().clone();
+        Image1.setImage(cards.get(0).getImageView());
+        Image2.setImage(cards.get(1).getImageView());
+        Image3.setImage(cards.get(2).getImageView());
+        Image4.setImage(cards.get(3).getImageView());
+        Image5.setImage(cards.get(4).getImageView());
+        Image6.setImage(cards.get(5).getImageView());
+        Image7.setImage(cards.get(6).getImageView());
+        Image8.setImage(cards.get(7).getImageView());
+        for (int i=0;i<=7;++i)
+             cards1.remove(cards.get(i));
+        Card9.setImage(cards1.get(0).getImageView());
+        Card10.setImage(cards1.get(1).getImageView());
+        Card11.setImage(cards1.get(2).getImageView());
+        Card12.setImage(cards1.get(3).getImageView());
     }
 }
