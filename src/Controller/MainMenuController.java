@@ -1,5 +1,6 @@
 package Controller;
 
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -44,8 +45,12 @@ public class MainMenuController {
     }
 
     @FXML
-    void trainBots() {
-
+    void trainBots() throws IOException {
+        Stage primaryStage = (Stage) p.getScene().getWindow();
+        Parent root = FXMLLoader.load(getClass().getResource("../View/Map.fxml"));
+        primaryStage.setTitle("BattleDeck");
+        primaryStage.setScene(new Scene(root));
+        primaryStage.show();
     }
 
     @FXML
