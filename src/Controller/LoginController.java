@@ -1,15 +1,14 @@
 package Controller;
 
+import GameControl.DataManager;
 import GameControl.ShareData;
 import Players.User;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
-
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
@@ -30,6 +29,8 @@ public class LoginController {
                 User user = (User) objectInputStream.readObject();
                 if (user.getUserName().equals(userText.getText()) && user.getPassword().equals(passText.getText())){
                     ShareData.setPlayer(user);
+                    DataManager.setImageDeck();
+                    DataManager.starterShareData();
                     Stage primaryStage = (Stage) userText.getScene().getWindow();
                     Parent root = FXMLLoader.load(getClass().getResource("../View/MainMenu.fxml"));
                     primaryStage.setTitle("MainMenu");
@@ -55,7 +56,7 @@ public class LoginController {
     }
 
     @FXML
-    void exit(ActionEvent event)
+    void exit()
     {
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
         alert.setTitle("Exit");
