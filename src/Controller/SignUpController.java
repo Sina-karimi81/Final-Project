@@ -12,6 +12,9 @@ import javafx.stage.Stage;
 
 import java.io.*;
 
+/**
+ * The type Sign up controller.
+ */
 public class SignUpController {
 
     @FXML
@@ -23,6 +26,11 @@ public class SignUpController {
     @FXML
     private Label error;
 
+    /**
+     * Login.
+     *
+     * @throws IOException the io exception
+     */
     @FXML
     void Login() throws IOException {
         Stage primaryStage = (Stage) SignPass.getScene().getWindow();
@@ -32,6 +40,11 @@ public class SignUpController {
         primaryStage.show();
     }
 
+    /**
+     * Sign up.
+     *
+     * @throws IOException the io exception
+     */
     @FXML
     void SignUp() throws IOException {
         String username = SignText.getText();
@@ -63,6 +76,11 @@ public class SignUpController {
             error.setText("password must be more than 8 characters");
     }
 
+    /**
+     * Save to file.
+     *
+     * @param user the user
+     */
     void saveToFile(User user) {
         try (ObjectOutputStream outputStream = new ObjectOutputStream(new FileOutputStream("Save.txt", true))) {
             outputStream.writeObject(user);
@@ -71,6 +89,9 @@ public class SignUpController {
         }
     }
 
+    /**
+     * Exit.
+     */
     @FXML
     void exit() {
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);

@@ -1,5 +1,19 @@
 package Cards;
 
+/**
+ * The enum Speed.
+ */
 public enum Speed {
-    Slow,Medium,Fast
+    /**
+     * Slow speed.
+     */
+    Slow,
+    /**
+     * Medium speed.
+     */
+    Medium,
+    /**
+     * Fast speed.
+     */
+    Fast
 }

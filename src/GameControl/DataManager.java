@@ -5,9 +5,18 @@ import javafx.scene.image.Image;
 
 import java.util.ArrayList;
 
+/**
+ * The type Data manager.
+ */
 public class DataManager {
 
 
+    /**
+     * Find card card.
+     *
+     * @param image the image
+     * @return the card
+     */
     public static Card findCard(Image image){
         ArrayList<Card> cards = ShareData.getCards();
         for (Card c: cards) {
@@ -17,15 +26,28 @@ public class DataManager {
         return null;
     }
 
+    /**
+     * Set deck.
+     *
+     * @param deck the deck
+     */
     public static void setDeck(ArrayList<Card> deck){
         ShareData.getPlayer().setDeck(deck);
     }
 
+    /**
+     * Starter share data.
+     */
     public static void starterShareData(){
         ArrayList<Card> cards = new ArrayList<>();
         start(cards);
     }
 
+    /**
+     * Start.
+     *
+     * @param cards the cards
+     */
     static void start(ArrayList<Card> cards) {
         cards.add(new Giant("../Photos/clash-royal-giant.png"));
         cards.add(new Archer("../Photos/clash-royal-archers.png"));
@@ -41,6 +63,10 @@ public class DataManager {
         cards.add(new Inferno("../Photos/clash-royal-inferno-tower.png"));
         ShareData.setCards(cards);
     }
+
+    /**
+     * Deck default.
+     */
     public static void deckDefault(){
         ArrayList<Card> deck = new ArrayList<>();
         ArrayList<Card> cards = ShareData.getCards();
@@ -50,6 +76,9 @@ public class DataManager {
         ShareData.getPlayer().setDeck(deck);
     }
 
+    /**
+     * Set image deck.
+     */
     public static void setImageDeck(){
         ArrayList<Card> cards = ShareData.getPlayer().getDeck();
         for (Card c: cards) {

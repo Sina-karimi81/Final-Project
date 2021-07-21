@@ -1,5 +1,8 @@
 package Towers;
 
+/**
+ * The type Tower.
+ */
 public class Tower {
     private int hp;
     private int damage;

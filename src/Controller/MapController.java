@@ -25,6 +25,9 @@ import java.util.ResourceBundle;
 import java.util.Timer;
 import java.util.TimerTask;
 
+/**
+ * The type Map controller.
+ */
 public class MapController implements Initializable
 {
     private boolean exit = false;
@@ -52,9 +55,18 @@ public class MapController implements Initializable
     @FXML
     private Label timeLabel;
 
+    /**
+     * The Progress.
+     */
     BigDecimal progress = new BigDecimal(String.format("%.2f" , 0.4));
 
 
+    /**
+     * Exit.
+     *
+     * @param event the event
+     * @throws IOException the io exception
+     */
     @FXML
     void exit(ActionEvent event) throws IOException {
         exit = true;
@@ -180,6 +192,11 @@ public class MapController implements Initializable
         }
     }
 
+    /**
+     * Handle drag detected 1.
+     *
+     * @param event the event
+     */
     @FXML
     void handleDragDetected1(MouseEvent event)
     {
@@ -190,6 +207,11 @@ public class MapController implements Initializable
         event.consume();
     }
 
+    /**
+     * Handle drag detected 2.
+     *
+     * @param event the event
+     */
     @FXML
     void handleDragDetected2(MouseEvent event)
     {
@@ -200,6 +222,11 @@ public class MapController implements Initializable
         event.consume();
     }
 
+    /**
+     * Handle drag detected 3.
+     *
+     * @param event the event
+     */
     @FXML
     void handleDragDetected3(MouseEvent event)
     {
@@ -210,6 +237,11 @@ public class MapController implements Initializable
         event.consume();
     }
 
+    /**
+     * Handle drag detected 4.
+     *
+     * @param event the event
+     */
     @FXML
     void handleDragDetected4(MouseEvent event)
     {

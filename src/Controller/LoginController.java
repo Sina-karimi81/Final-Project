@@ -13,6 +13,9 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 
+/**
+ * The type Login controller.
+ */
 public class LoginController {
     @FXML
     private TextField userText;
@@ -21,6 +24,9 @@ public class LoginController {
     @FXML
     private Label error;
 
+    /**
+     * Login.
+     */
     @FXML
     void Login() {
         try (FileInputStream f = new FileInputStream("Save.txt")){
@@ -46,6 +52,11 @@ public class LoginController {
     }
 
 
+    /**
+     * Sign up.
+     *
+     * @throws IOException the io exception
+     */
     @FXML
     void SignUp() throws IOException {
         Stage primaryStage = (Stage) userText.getScene().getWindow();
@@ -55,6 +66,9 @@ public class LoginController {
         primaryStage.show();
     }
 
+    /**
+     * Exit.
+     */
     @FXML
     void exit()
     {

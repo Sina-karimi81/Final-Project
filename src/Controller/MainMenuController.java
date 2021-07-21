@@ -13,10 +13,18 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
+/**
+ * The type Main menu controller.
+ */
 public class MainMenuController {
     @FXML
     private Button p;
 
+    /**
+     * Show deck.
+     *
+     * @throws IOException the io exception
+     */
     @FXML
     void ShowDeck() throws IOException {
         Stage primaryStage = (Stage) p.getScene().getWindow();
@@ -26,6 +34,11 @@ public class MainMenuController {
         primaryStage.show();
     }
 
+    /**
+     * Show history.
+     *
+     * @throws IOException the io exception
+     */
     @FXML
     void showHistory() throws IOException {
         Stage primaryStage = (Stage) p.getScene().getWindow();
@@ -35,6 +48,11 @@ public class MainMenuController {
         primaryStage.show();
     }
 
+    /**
+     * Show profile.
+     *
+     * @throws IOException the io exception
+     */
     @FXML
     void showProfile() throws IOException {
         Stage primaryStage = (Stage) p.getScene().getWindow();
@@ -44,6 +62,11 @@ public class MainMenuController {
         primaryStage.show();
     }
 
+    /**
+     * Train bots.
+     *
+     * @throws IOException the io exception
+     */
     @FXML
     void trainBots() throws IOException {
         Stage primaryStage = (Stage) p.getScene().getWindow();
@@ -53,6 +76,11 @@ public class MainMenuController {
         primaryStage.show();
     }
 
+    /**
+     * Exit.
+     *
+     * @param event the event
+     */
     @FXML
     void exit(ActionEvent event)
     {
@@ -67,6 +95,12 @@ public class MainMenuController {
         }
     }
 
+    /**
+     * Logout.
+     *
+     * @param event the event
+     * @throws IOException the io exception
+     */
     @FXML
     void logout(ActionEvent event) throws IOException
     {

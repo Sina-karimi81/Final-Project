@@ -13,6 +13,9 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
+/**
+ * The type Battle history.
+ */
 public class BattleHistory {
 
     @FXML
@@ -21,6 +24,9 @@ public class BattleHistory {
     private ListView<String> List;
     private final ObservableList<String> History = FXCollections.observableArrayList();
 
+    /**
+     * Initialize.
+     */
     public void initialize()
     {
         History.add("Vs. Ali : 2-1");
@@ -46,6 +52,12 @@ public class BattleHistory {
         List.setItems(History);
     }
 
+    /**
+     * Back.
+     *
+     * @param event the event
+     * @throws IOException the io exception
+     */
     @FXML
     void Back(ActionEvent event) throws IOException {
         Stage primaryStage = (Stage) BattleHistoryLabel1.getScene().getWindow();

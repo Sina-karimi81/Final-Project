@@ -13,6 +13,9 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+/**
+ * The type Profile.
+ */
 public class Profile implements Initializable {
 
     @FXML
@@ -25,7 +28,11 @@ public class Profile implements Initializable {
     private Label levelLabel;
 
 
-
+    /**
+     * Back.
+     *
+     * @throws IOException the io exception
+     */
     @FXML
     void back() throws IOException{
         Stage primaryStage = (Stage) levelLabel.getScene().getWindow();

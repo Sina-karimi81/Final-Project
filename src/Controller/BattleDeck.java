@@ -18,6 +18,9 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
 
+/**
+ * The type Battle deck.
+ */
 public class BattleDeck implements Initializable{
 
     private ArrayList<ImageView> imageViews;
@@ -60,6 +63,11 @@ public class BattleDeck implements Initializable{
     private ImageView Card12;
 
 
+    /**
+     * Handle drag detected 9.
+     *
+     * @param event the event
+     */
     @FXML
     void handleDragDetected9(MouseEvent event) {
         imageView = Card9;
@@ -70,6 +78,11 @@ public class BattleDeck implements Initializable{
         event.consume();
     }
 
+    /**
+     * Handle drag detected 10.
+     *
+     * @param event the event
+     */
     @FXML
     void handleDragDetected10(MouseEvent event) {
         imageView = Card10;
@@ -80,6 +93,11 @@ public class BattleDeck implements Initializable{
         event.consume();
     }
 
+    /**
+     * Handle drag detected 11.
+     *
+     * @param event the event
+     */
     @FXML
     void handleDragDetected11(MouseEvent event) {
         imageView = Card11;
@@ -90,6 +108,11 @@ public class BattleDeck implements Initializable{
         event.consume();
     }
 
+    /**
+     * Handle drag detected 12.
+     *
+     * @param event the event
+     */
     @FXML
     void handleDragDetected12(MouseEvent event) {
         imageView = Card12;
@@ -100,6 +123,11 @@ public class BattleDeck implements Initializable{
         event.consume();
     }
 
+    /**
+     * Handle drag over 1.
+     *
+     * @param event the event
+     */
     @FXML
     void handleDragOver1(DragEvent event) {
         if (event.getDragboard().hasImage()) {
@@ -107,6 +135,9 @@ public class BattleDeck implements Initializable{
         }
     }
 
+    /**
+     * Handle drag drop 1.
+     */
     @FXML
     void handleDragDrop1() {
         Image img = imageView.getImage();
@@ -114,6 +145,11 @@ public class BattleDeck implements Initializable{
         Image1.setImage(img);
     }
 
+    /**
+     * Handle drag over 2.
+     *
+     * @param event the event
+     */
     @FXML
     void handleDragOver2(DragEvent event) {
         if (event.getDragboard().hasImage()) {
@@ -121,6 +157,9 @@ public class BattleDeck implements Initializable{
         }
     }
 
+    /**
+     * Handle drag drop 2.
+     */
     @FXML
     void handleDragDrop2() {
         Image img = imageView.getImage();
@@ -128,6 +167,11 @@ public class BattleDeck implements Initializable{
         Image2.setImage(img);
     }
 
+    /**
+     * Handle drag over 3.
+     *
+     * @param event the event
+     */
     @FXML
     void handleDragOver3(DragEvent event) {
         if (event.getDragboard().hasImage()) {
@@ -135,6 +179,9 @@ public class BattleDeck implements Initializable{
         }
     }
 
+    /**
+     * Handle drag drop 3.
+     */
     @FXML
     void handleDragDrop3() {
         Image img = imageView.getImage();
@@ -142,6 +189,11 @@ public class BattleDeck implements Initializable{
         Image3.setImage(img);
     }
 
+    /**
+     * Handle drag over 4.
+     *
+     * @param event the event
+     */
     @FXML
     void handleDragOver4(DragEvent event) {
         if (event.getDragboard().hasImage()) {
@@ -149,6 +201,9 @@ public class BattleDeck implements Initializable{
         }
     }
 
+    /**
+     * Handle drag drop 4.
+     */
     @FXML
     void handleDragDrop4() {
         Image img = imageView.getImage();
@@ -156,6 +211,11 @@ public class BattleDeck implements Initializable{
         Image4.setImage(img);
     }
 
+    /**
+     * Handle drag over 5.
+     *
+     * @param event the event
+     */
     @FXML
     void handleDragOver5(DragEvent event) {
         if (event.getDragboard().hasImage()) {
@@ -163,6 +223,9 @@ public class BattleDeck implements Initializable{
         }
     }
 
+    /**
+     * Handle drag drop 5.
+     */
     @FXML
     void handleDragDrop5() {
         Image img = imageView.getImage();
@@ -170,6 +233,11 @@ public class BattleDeck implements Initializable{
         Image5.setImage(img);
     }
 
+    /**
+     * Handle drag over 6.
+     *
+     * @param event the event
+     */
     @FXML
     void handleDragOver6(DragEvent event) {
         if (event.getDragboard().hasImage()) {
@@ -177,6 +245,9 @@ public class BattleDeck implements Initializable{
         }
     }
 
+    /**
+     * Handle drag drop 6.
+     */
     @FXML
     void handleDragDrop6() {
         Image img = imageView.getImage();
@@ -184,6 +255,11 @@ public class BattleDeck implements Initializable{
         Image6.setImage(img);
     }
 
+    /**
+     * Handle drag over 7.
+     *
+     * @param event the event
+     */
     @FXML
     void handleDragOver7(DragEvent event) {
         if (event.getDragboard().hasImage()) {
@@ -191,6 +267,9 @@ public class BattleDeck implements Initializable{
         }
     }
 
+    /**
+     * Handle drag drop 7.
+     */
     @FXML
     void handleDragDrop7() {
         Image img = imageView.getImage();
@@ -198,6 +277,11 @@ public class BattleDeck implements Initializable{
         Image7.setImage(img);
     }
 
+    /**
+     * Handle drag over 8.
+     *
+     * @param event the event
+     */
     @FXML
     void handleDragOver8(DragEvent event) {
         if (event.getDragboard().hasImage()) {
@@ -205,6 +289,9 @@ public class BattleDeck implements Initializable{
         }
     }
 
+    /**
+     * Handle drag drop 8.
+     */
     @FXML
     void handleDragDrop8() {
         Image img = imageView.getImage();
@@ -212,6 +299,11 @@ public class BattleDeck implements Initializable{
         Image8.setImage(img);
     }
 
+    /**
+     * Back.
+     *
+     * @throws IOException the io exception
+     */
     @FXML
     void Back() throws IOException {
         ArrayList<Card> deck = new ArrayList<>();

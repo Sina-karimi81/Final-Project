@@ -1,9 +1,5 @@
 package Cards;
 
-import javafx.scene.image.Image;
-
-import java.io.Serializable;
-
 public class Building extends Card {
     private int lifeTime;
     private int hp;
