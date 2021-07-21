@@ -133,10 +133,13 @@ public class MapController implements Initializable
                         }
                         if(minute == 0)
                         {
-                            progress = new BigDecimal(String.format("%.2f" , progress.doubleValue() + 0.2));
-                            elixirCount.setProgress(progress.doubleValue());
-                            Platform.runLater(()->countLabel.setText(Integer.toString((int)Math.round(progress.doubleValue() * 10))));
-                            elixir += 2;
+                           if(progress.doubleValue() < 1)
+                           {
+                               progress = new BigDecimal(String.format("%.2f" , progress.doubleValue() + 0.2));
+                               elixirCount.setProgress(progress.doubleValue());
+                               Platform.runLater(()->countLabel.setText(Integer.toString((int)Math.round(progress.doubleValue() * 10))));
+                               elixir += 2;
+                           }
                         }
                     }
                 };

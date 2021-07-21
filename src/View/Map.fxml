@@ -63,5 +63,35 @@
             <Font name="System Bold" size="10.0" />
          </font>
       </Label>
+      <ImageView fitHeight="53.0" fitWidth="72.0" layoutX="172.0" layoutY="14.0" pickOnBounds="true">
+         <image>
+            <Image url="@../Photos/King_Tower_Red.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="53.0" fitWidth="72.0" layoutX="172.0" layoutY="476.0" pickOnBounds="true">
+         <image>
+            <Image url="@../Photos/King_Tower_Blue.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="53.0" fitWidth="72.0" layoutX="285.0" layoutY="116.0" pickOnBounds="true">
+         <image>
+            <Image url="@../Photos/Princesstower-red.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="53.0" fitWidth="72.0" layoutX="59.0" layoutY="116.0" pickOnBounds="true">
+         <image>
+            <Image url="@../Photos/Princesstower-red.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="53.0" fitWidth="72.0" layoutX="63.0" layoutY="364.0" pickOnBounds="true">
+         <image>
+            <Image url="@../Photos/%5Dprincess-tower-blue.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="53.0" fitWidth="72.0" layoutX="285.0" layoutY="357.0" pickOnBounds="true">
+         <image>
+            <Image url="@../Photos/%5Dprincess-tower-blue.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>
