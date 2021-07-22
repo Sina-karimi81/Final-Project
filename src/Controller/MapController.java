@@ -121,7 +121,7 @@ public class MapController implements Initializable
                             Platform.runLater(()->countLabel.setText(Integer.toString((int)Math.round(progress.doubleValue() * 10))));
                             elixir++;
                         }
-                        if(elixir == 0)
+                        if(elixir != 10)
                         {
                             if(progress.doubleValue() < 1)
                             {
@@ -178,11 +178,11 @@ public class MapController implements Initializable
               else
               {
                   Platform.runLater(()->timeLabel.setText(minute + ":" + second));
-                  if(minute == 0 && second == 0)
-                  {
-                      this.cancel();
-                  }
               }
+                if(minute == 0 && second == 0)
+                {
+                    this.cancel();
+                }
             }
         };
         Timer t = new Timer();
